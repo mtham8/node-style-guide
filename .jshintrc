@@ -1,0 +1,20 @@
+{
+	// best practices
+	"freeze": true, // don't screw with protoypes
+	"latedef": "nofunc", // allow use of functions before they're defined, but nothing else
+	"nonbsp": true, // no weird non-breaking space characters
+	"shadow": true, // permit variable shadowing
+	"undef": true, // warn when value is used before defined
+	"unused": true, // warn when value is unused
+	"expr": true, // be friendly to the "should" library
+	"futurehostile": true, // warn about unused reserved words
+
+	// code complexity
+	"maxcomplexity": 10, // max cyclomatic complexity (number of independent paths in a function)
+	"maxdepth": 4, // max number of nested blocks
+	"maxparams": 5, // max number of acceptable function parameters
+	"maxstatements": 15, // max number of statements in a function
+
+	// Supported environments
+	"node": true
+}

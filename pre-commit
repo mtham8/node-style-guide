@@ -1,0 +1,2 @@
+# Add to your .git/hooks file to run lint & style checks before commit code
+npm run analyze

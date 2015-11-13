@@ -1,0 +1,28 @@
+{
+  "name": "node-style-guide",
+  "version": "1.0.0",
+  "description": "Maker Studios's Node style guide",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+	"analyze": "npm run lint && npm run style",
+	"lint": "./node_modules/.bin/jshint examples",
+	"style": "./node_modules/.bin/jscs examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MakerStudios/node-style-guide"
+  },
+  "author": "Maker Studios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MakerStudios/node-style-guide/issues"
+  },
+  "homepage": "https://github.com/MakerStudios/node-style-guide",
+  "dependencies": {
+    "jscs": "^2.5.1",
+    "jshint": "^2.9.1-rc1"
+  }
+}
