@@ -1,10 +1,35 @@
-# [RisingStack](http://risingstack.com) Node.js Style Guide() {
+# [Maker Studios's](http://risingstack.com) Node.js Style Guide() {
 
-### Most of the content is taken from the [Airbnb styleguide](https://github.com/airbnb/javascript)
+### Most of the content is taken from the [Airbnb styleguide](https://github.com/airbnb/javascript) via [RisingStack's styleguide](https://github.com/RisingStack/node-style-guide).
 
-Heavily inspired by them as well:
-- @caolan's [Node.js styleguide](http://caolanmcmahon.com/posts/nodejs_style_and_structure)
-- @felixge's [Node.js styleguide](https://github.com/felixge/node-style-guide)
+## Using this Repository
+
+### Adding static analysis to your project
+If you'd like to add automated static analysis tools to your project, do the following:
+
+  1. Install the style checker ([jscs](http://jscs.info/)) and linter ([jshint](http://jshint.com/)): `npm install --save-dev jscs jshint`.
+  1. Copy the `.jscsrc` and `.jshintrc` files to the top-level folder of your project.
+  1. Add the following tasks to your `package.json` to run the static analysis tools:
+  ```javascript
+	  "scripts": {
+		"analyze": "npm run lint && npm run style",
+		"lint": "./node_modules/.bin/jshint examples",
+		"style": "./node_modules/.bin/jscs examples"
+	  }
+  ```
+  1. You can now run the static analysis tools on demand with `npm run analyze`, `npm run lint`, and `npm run style`.
+  1. If you'd like to run static analysis before committing to a project, copy the pre-commit hook, `pre-commit`, to the project's `.git/hooks` directory.
+  1. If you'd like to fail a build when static analysis fails, add a task to your CI config. For CircleCI:
+  ```yml
+	test:
+	  pre:
+		- npm run analyze
+  ```
+
+### Testing files
+To test a file for compliance without installing the static analysis tools in your project:
+  1. Add the file to this project's `examples` directory.
+  1. Run `npm run analyze`
 
 ## Table of Contents
 
