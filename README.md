@@ -3,7 +3,7 @@
 ### Most of the content is taken from the [Airbnb styleguide](https://github.com/airbnb/javascript) via [RisingStack's styleguide](https://github.com/RisingStack/node-style-guide).
 
 ## Table of Contents
-  1. [Quick Compliance Testing](#Quick-compliance-testing)
+  1. [Quick Compliance Testing](#quick-compliance-testing)
   1. [Adding Static Analysis to Your Project](#adding-static-analysis-to-your-project)
   1. [Types](#types)
   1. [Objects](#objects)
