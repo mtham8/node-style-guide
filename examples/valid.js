@@ -5,7 +5,8 @@ module.exports = {
 var users = [
 	{ id: 0, name: 'Brenden Eich' },
 	{ id: 1, name: 'substack' },
-	{ id: 2, name: 'Isaac Schlueter' }
+	{ id: 2, name: 'Isaac Schlueter' },
+	{ id_a: 2 }
 ];
 
 function findUser(id, callback) {
