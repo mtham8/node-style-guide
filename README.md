@@ -957,8 +957,6 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
   - Prefixing your comments with `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `TODO -- need to implement`.
 
-  - Use `// TODO:` to annotate solutions to problems
-
     ```javascript
     function Calculator() {
 
