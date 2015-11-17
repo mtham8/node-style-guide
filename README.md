@@ -785,7 +785,15 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       // ...stuff...
     }
     ```
+  - To ensure value existence:
 
+  ```javascript
+  // bad
+  val != null;
+  
+  // good
+  val !== undefined && val !== null
+  ```
   - For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll
 
 **[⬆ back to top](#table-of-contents)**
