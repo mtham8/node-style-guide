@@ -644,6 +644,26 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     callback();
   }
   ```
+  - Use the [`async`](https://github.com/caolan/async) library to destroy the Pyramid of Doom, especially for nesting three or more callbacks.
+  ```javascript
+  // bad
+  function get1(val1, callback) {
+    function get2(val2, callback) {
+      function get3(val3, callback) {
+        // evil and sadness live here
+      }
+    }
+  }
+  
+  // good
+  var tasks = [
+    get1,
+    get2,
+    get3
+  ];
+  
+  async.series(tasks, processResult);
+  ```
 
 **[⬆ back to top](#table-of-contents)**
 
