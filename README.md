@@ -1234,14 +1234,14 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     this._firstName = 'Panda';
     ```
 
-  - When saving a reference to `this` use `_this`.
+  - When saving a reference to `this` use `self`.
 
     ```javascript
     // bad
     function() {
-      var self = this;
+      var _this = this;
       return function() {
-        console.log(self);
+        console.log(_this);
       };
     }
 
@@ -1255,9 +1255,9 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
     // good
     function() {
-      var _this = this;
+      var self = this;
       return function() {
-        console.log(_this);
+        console.log(self);
       };
     }
     ```
