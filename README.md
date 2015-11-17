@@ -854,17 +854,17 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     }
     ```
 
-  - Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
+  - Use `//` for single line comments.
 
     ```javascript
-    // bad
+    // good
     var active = true;  // is current tab
 
     // good
     // is current tab
     var active = true;
 
-    // bad
+    // good
     function getType() {
       console.log('fetching type...');
       // set the default type to 'no type'
