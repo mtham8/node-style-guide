@@ -177,6 +177,36 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       ...
     }
     ```
+    
+  - Prefer `map` over `forEach` for transforming values in a list.
+    ```javascript
+    var numbers = [1, 2, 3];
+    
+    // bad
+    var doubled = [];
+    numbers.forEach(function(n) { 
+      doubled.push(n*n);
+    });
+    
+    // good 
+    var doubled = numbers.map(function(n) { return n*n; });
+    ```
+    
+  - Prefer `filter` over `forEach` for removing values in a list
+    ```javascript
+    var numbers = [1, 10, 100, 1000];
+    
+    // bad
+    var largeNumbers = [];
+    numbers.forEach(function(n) {
+      if (n > 50) {
+        largeNumbers.push(n);
+      }
+    });
+    
+    // good
+    var largeNumbers = numbers.filter(function(n) { return n > 50; });
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
