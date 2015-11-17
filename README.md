@@ -363,6 +363,17 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
     var isJedi = getProp('jedi');
     ```
+    - Use the `||` operator to avoid accessing a property of a `null` or `undefined` object.
+    
+    ```javascript
+    // bad
+    var result;
+    if (mayNotExist.a)
+       result = mayNotExist.a;
+    
+    // good
+    var result = (mayNotExist || {}).a;
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
