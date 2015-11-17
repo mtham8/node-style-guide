@@ -952,20 +952,10 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       return type;
     }
     ```
+    
+  - Prefixing your comments with `FIXME` is reserved for internal use. While you are in the middle of a task feel free to insert `FIXME` comments, to commit them locally, and to commit them to a remote feature branch. Make sure all `FIXME` issues are resolved before opening a pull request or merging to a shared branch such as develop or master.
 
-  - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
-
-  - Use `// FIXME:` to annotate problems
-
-    ```javascript
-    function Calculator() {
-
-      // FIXME: shouldn't use a global here
-      total = 0;
-
-      return this;
-    }
-    ```
+  - Prefixing your comments with `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `TODO -- need to implement`.
 
   - Use `// TODO:` to annotate solutions to problems
 
