@@ -588,6 +588,21 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     });
   }
   ```
+    - Callbacks should always be the last parameter to asynchronous functions.
+
+  ```javascript
+  // bad
+  function asyncFunc(callback, options) {
+    // async operation
+    callback();
+  }
+  
+  // good
+  function asyncFunc(options, callback) {
+    // async operation
+    callback();
+  }
+  ```
 
 **[⬆ back to top](#table-of-contents)**
 
