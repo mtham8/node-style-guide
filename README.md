@@ -199,13 +199,13 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     var fullName = 'Bob ' + this.lastName;
     
     // bad
-    var store = 'Bob\''s Widgets';
+    var store = 'Bob\'s Widgets';
     
     // good
     var store = "Bob's Widgets";
     
     // good
-    var store = 'Bob "Danger" Smith\''s Widgets';
+    var store = 'Bob "Danger" Smith\'s Widgets';
     ```
 
   - Strings longer than 80 characters should be written across multiple lines using string concatenation.
