@@ -185,11 +185,11 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     // bad
     var doubled = [];
     numbers.forEach(function(n) { 
-      doubled.push(n*n);
+      doubled.push(n * n);
     });
     
     // good 
-    var doubled = numbers.map(function(n) { return n*n; });
+    var doubled = numbers.map(function(n) { return n * n; });
     ```
     
   - Prefer `filter` over `forEach` for removing values in a list
