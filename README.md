@@ -915,24 +915,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
 ## Whitespace
 
-  - Use soft tabs set to 2 spaces
-
-    ```javascript
-    // bad
-    function() {
-    ∙∙∙∙var name;
-    }
-
-    // bad
-    function() {
-    ∙var name;
-    }
-
-    // good
-    function() {
-    ∙∙var name;
-    }
-    ```
+  - Use leading tabs instead of spaces.
 
   - Place 1 space before the leading brace.
 
