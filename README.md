@@ -550,14 +550,14 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     var Car = require('./models/Car');
     ```
 
-  - Do not use the `.js` when requiring modules
+  - Use the `.js` extension when requiring local module files, it makes it easier to find references
 
   ```javascript
     // bad
-    var Batmobil = require('./models/Car.js');
+    var Batmobil = require('./models/Car');
 
     // good
-    var Batmobil = require('./models/Car');
+    var Batmobil = require('./models/Car.js');
 
   ```
 
