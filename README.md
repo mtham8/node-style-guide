@@ -561,6 +561,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
   ```
   - It is ok to require a directory if that directory can be loaded using the [Folders as Modules] (https://nodejs.org/api/modules.html#modules_folders_as_modules) pattern
+
   ```javascript
     // ok
     var cars = require('./models/cars/');
