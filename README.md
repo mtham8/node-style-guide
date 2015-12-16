@@ -550,16 +550,23 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     var Car = require('./models/Car');
     ```
 
-  - Do not use the `.js` when requiring modules
+  - Use the `.js` extension when requiring local module files, it makes it easier to find references
 
   ```javascript
     // bad
-    var Batmobil = require('./models/Car.js');
-
-    // good
     var Batmobil = require('./models/Car');
 
+    // good
+    var Batmobil = require('./models/Car.js');
+
   ```
+  - It is ok to require a directory if that directory can be loaded using the [Folders as Modules] (https://nodejs.org/api/modules.html#modules_folders_as_modules) pattern
+
+  ```javascript
+    // ok
+    var cars = require('./models/cars/');
+  ```
+  
 
 
 **[⬆ back to top](#table-of-contents)**
