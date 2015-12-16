@@ -526,6 +526,23 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       return true;
     }
     ```
+    
+  - Stay positive when naming boolean variables
+
+    ```javascript
+    // bad
+    theData = true;
+    // considerably bad, confusing
+    hasNoData = false;
+    
+    // good
+    var hasData = false;
+    var isValid = !!someObj.val;
+    ```
+
+
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Requires
 
