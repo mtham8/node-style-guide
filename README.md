@@ -357,6 +357,35 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       // ...stuff...
     }
     ```
+    
+  - Abstract boolean chains to well named functions
+
+    ```javascript
+    // not easy to scan
+    if (!myData && (myOtherData && myOtherData.option && myOtherData.option === 'specialParam' && myOtherData.fallback !== false)) {
+        // do stuff here
+    }
+       
+    // easier to scan
+    if (!myData && hasOverride(myOtherData)) {
+        // do stuff here
+    }
+    ```
+    
+  - Never put optional arguments first
+    
+    ```javascript
+    // bad
+    function notSureIf(optionalThing, requiredData) {
+        // do stuff here
+    }
+       
+    // good
+    function okDoke(requiredData, optionalThing) {
+        // do stuff here
+    }
+    ```
+
 
 **[⬆ back to top](#table-of-contents)**
 
