@@ -72,7 +72,6 @@
 	"requirePaddingNewLinesBeforeLineComments": {
 		"allExcept": "firstAfterCurly"
 	},
-	"requirePaddingNewLinesAfterBlocks": true,
 	"requireSemicolons": true,
 	"safeContextKeyword": "self",
 	"validateLineBreaks": "LF",
