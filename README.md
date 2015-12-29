@@ -33,12 +33,12 @@
 To test a file for style compliance without installing the static analysis tools in your project:
   1. Add the file to this project's `examples` directory.
   1. Run `npm run analyze`
-  
+
 ## Adding Static Analysis to Your Project
 If you'd like to add automated static analysis tools to your project, do the following:
 
   1. Install the style checker ([jscs](http://jscs.info/)) and linter ([jshint](http://jshint.com/)): `npm install --save-dev jscs jshint`.
-  2. Copy the `.jscsrc` and `.jshintrc` files to the top-level folder of your project.
+  2. Copy the `.jscsrc`, `.jshintrc` and `.jshintignore` files to the top-level folder of your project.
   3. Add the following tasks to your `package.json` to run the static analysis tools:
 ```javascript
 	  "scripts": {
@@ -177,25 +177,25 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       ...
     }
     ```
-    
+
   - Prefer `map` over `forEach` for transforming values in a list.
     ```javascript
     var numbers = [1, 2, 3];
-    
+
     // bad
     var doubled = [];
-    numbers.forEach(function(n) { 
+    numbers.forEach(function(n) {
       doubled.push(n * n);
     });
-    
-    // good 
+
+    // good
     var doubled = numbers.map(function(n) { return n * n; });
     ```
-    
+
   - Prefer `filter` over `forEach` for removing values in a list
     ```javascript
     var numbers = [1, 10, 100, 1000];
-    
+
     // bad
     var largeNumbers = [];
     numbers.forEach(function(n) {
@@ -203,7 +203,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
         largeNumbers.push(n);
       }
     });
-    
+
     // good
     var largeNumbers = numbers.filter(function(n) { return n > 50; });
     ```
@@ -227,13 +227,13 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
     // good
     var fullName = 'Bob ' + this.lastName;
-    
+
     // bad
     var store = 'Bob\'s Widgets';
-    
+
     // good
     var store = "Bob's Widgets";
-    
+
     // good
     var store = 'Bob "Danger" Smith\'s Widgets';
     ```
@@ -357,7 +357,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       // ...stuff...
     }
     ```
-    
+
   - Abstract boolean chains to well named functions
 
     ```javascript
@@ -365,21 +365,21 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     if (!myData && (myOtherData && myOtherData.option && myOtherData.option === 'specialParam' && myOtherData.fallback !== false)) {
         // do stuff here
     }
-       
+
     // easier to scan
     if (!myData && hasOverride(myOtherData)) {
         // do stuff here
     }
     ```
-    
+
   - Never put optional arguments first
-    
+
     ```javascript
     // bad
     function notSureIf(optionalThing, requiredData) {
         // do stuff here
     }
-       
+
     // good
     function okDoke(requiredData, optionalThing) {
         // do stuff here
@@ -423,13 +423,13 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     var isJedi = getProp('jedi');
     ```
     - Use the `||` operator to avoid accessing a property of a `null` or `undefined` object.
-    
+
     ```javascript
     // bad
     var result;
     if (mayNotExist.a)
        result = mayNotExist.a;
-    
+
     // good
     var result = (mayNotExist || {}).a;
     ```
@@ -555,7 +555,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       return true;
     }
     ```
-    
+
   - Stay positive when naming boolean variables
 
     ```javascript
@@ -563,7 +563,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     theData = true;
     // considerably bad, confusing
     hasNoData = false;
-    
+
     // good
     var hasData = false;
     var isValid = !!someObj.val;
@@ -612,7 +612,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     // ok
     var cars = require('./models/cars/');
   ```
-  
+
 
 
 **[⬆ back to top](#table-of-contents)**
@@ -690,7 +690,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
     // async operation
     callback();
   }
-  
+
   // good
   function asyncFunc(options, callback) {
     // async operation
@@ -707,14 +707,14 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       }
     }
   }
-  
+
   // good
   var tasks = [
     get1,
     get2,
     get3
   ];
-  
+
   async.series(tasks, processResult);
   ```
 
@@ -904,7 +904,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
   ```javascript
   // bad
   val != null;
-  
+
   // good
   val !== undefined && val !== null
   ```
@@ -1005,7 +1005,7 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
       return type;
     }
     ```
-    
+
   - Prefixing your comments with `FIXME` is reserved for internal use. While you are in the middle of a task feel free to insert `FIXME` comments, to commit them locally, and to commit them to a remote feature branch. Make sure all `FIXME` issues are resolved before opening a pull request or merging to a shared branch such as develop or master.
 
   - Prefixing your comments with `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `TODO -- need to implement`.
