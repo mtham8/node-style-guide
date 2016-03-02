@@ -79,5 +79,8 @@
 		"mark": "'",
 		"escape": true
 	},
-	"validateIndentation": "\t"
+	"validateIndentation": "\t",
+	"requireArrowFunctions": true,
+	"requireTemplateStrings": true,
+	"requireParenthesesAroundArrowParam": true
 }
