@@ -1,6 +1,7 @@
 // This style is based on the airbnb preset
 {
 	"excludeFiles": ["node_modules"],
+	"fileExtensions": [".js", ".jsx"],
 	"esnext": true,
 	"disallowSpacesInNamedFunctionExpression": {
 		"beforeOpeningRoundBrace": true
@@ -72,6 +73,7 @@
 	"requirePaddingNewLinesBeforeLineComments": {
 		"allExcept": "firstAfterCurly"
 	},
+	"maximumLineLength": 120,
 	"requireSemicolons": true,
 	"safeContextKeyword": "self",
 	"validateLineBreaks": "LF",
