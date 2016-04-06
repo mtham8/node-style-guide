@@ -10,8 +10,9 @@ var users = [
 ];
 
 function findUser(id, callback) {
-	if (!id)
+	if (!id) {
 		return callback('Missing ID');
+	}
 
 	var matchedUsers = users.filter(matchesId);
 	return matchedUsers[0];

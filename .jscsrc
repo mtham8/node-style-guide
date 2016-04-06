@@ -51,7 +51,13 @@
 	"requireSpacesInForStatement": true,
 	"requireSpaceBetweenArguments": true,
 	"requireCurlyBraces": [
-		"do"
+		"do",
+		"for",
+		"while",
+		"try",
+		"catch",
+		"if",
+		"else"
 	],
 	"requireSpaceAfterKeywords": [
 		"if",
