@@ -210,7 +210,6 @@ If you'd like to fail a build when static analysis fails, add a task to your CI 
 
 **[⬆ back to top](#table-of-contents)**
 
-
 ## Strings
 
   - Prefer single quotes `''` for strings. If the string contains single quotes but no double quotes, surround with double quotes `""`.

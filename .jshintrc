@@ -1,5 +1,5 @@
 {
-	// best practices
+	// Best practices
 	"freeze": true, // don't screw with protoypes
 	"latedef": "nofunc", // allow use of functions before they're defined, but nothing else
 	"nonbsp": true, // no weird non-breaking space characters
@@ -9,7 +9,7 @@
 	"expr": true, // be friendly to the "should" library
 	"futurehostile": true, // warn about unused reserved words
 
-	// code complexity
+	// Code complexity
 	"maxcomplexity": 10, // max cyclomatic complexity (number of independent paths in a function)
 	"maxdepth": 4, // max number of nested blocks
 	"maxparams": 5, // max number of acceptable function parameters
