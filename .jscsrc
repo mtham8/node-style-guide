@@ -1,6 +1,7 @@
 // This style is based on the AirBNB preset
 {
 	"excludeFiles": ["node_modules"],
+	"fileExtensions": [".js", ".jsx"],
 	"esnext": true,
 	"disallowSpacesInNamedFunctionExpression": {
 		"beforeOpeningRoundBrace": true
@@ -78,6 +79,7 @@
 	"requirePaddingNewLinesBeforeLineComments": {
 		"allExcept": "firstAfterCurly"
 	},
+	"maximumLineLength": 120,
 	"requireSemicolons": true,
 	"safeContextKeyword": "self",
 	"validateLineBreaks": "LF",
@@ -85,5 +87,8 @@
 		"mark": "'",
 		"escape": true
 	},
-	"validateIndentation": "\t"
+	"validateIndentation": "\t",
+	"requireArrowFunctions": true,
+	"requireTemplateStrings": true,
+	"requireParenthesesAroundArrowParam": true
 }
